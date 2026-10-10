@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基于NLP的电商平台用户评论情感分析与消费决策影响研究</title>
+<style>
+  :root { --primary: #1a56db; --bg: #f8fafc; --card: #ffffff; --text: #1e293b; --text-light: #64748b; --border: #e2e8f0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+  header { text-align: center; margin-bottom: 48px; padding-bottom: 32px; border-bottom: 2px solid var(--border); }
+  header .badge { display: inline-block; background: #dbeafe; color: #1e40af; padding: 6px 16px; border-radius: 20px; font-size: 13px; margin-bottom: 16px; }
+  header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; color: #0f172a; }
+  header .subtitle { font-size: 15px; color: var(--text-light); }
+  .meta { display: flex; justify-content: center; gap: 32px; margin-top: 16px; font-size: 13px; color: var(--text-light); flex-wrap: wrap; }
+  .meta span { display: flex; align-items: center; gap: 4px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .card h2 { font-size: 18px; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border); color: #0f172a; }
+  .files-list { display: grid; gap: 12px; }
+  .file-item { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid var(--border); border-radius: 10px; text-decoration: none; color: var(--text); transition: all .2s; }
+  .file-item:hover { border-color: var(--primary); box-shadow: 0 2px 8px rgba(26,86,219,0.1); transform: translateY(-1px); }
+  .file-item .icon { font-size: 28px; flex-shrink: 0; }
+  .file-item .info { flex: 1; }
+  .file-item .name { font-weight: 600; font-size: 15px; margin-bottom: 2px; }
+  .file-item .desc { font-size: 13px; color: var(--text-light); }
+  .file-item .arrow { color: var(--text-light); font-size: 18px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .tag { background: #f1f5f9; color: #475569; padding: 4px 12px; border-radius: 6px; font-size: 12px; }
+  .footer { text-align: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-light); }
+  .abstract-text { font-size: 14px; color: var(--text-light); line-height: 1.8; text-align: justify; }
+  .highlight { color: var(--primary); font-weight: 600; }
+  @media (max-width: 640px) { .container { padding: 20px 16px; } header h1 { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="badge">📄 毕业论文 · 大数据管理与应用</div>
+    <h1>基于NLP的电商平台用户评论情感分析<br>与消费决策影响研究</h1>
+    <div class="subtitle">——以家电品类为例</div>
+    <div class="meta">
+      <span>👤 郭诗彤</span>
+      <span>🏫 大连财经学院 · 管理学院</span>
+      <span>📅 2026年10月</span>
+    </div>
+  </header>
+
+  <div class="card">
+    <h2>📋 摘要</h2>
+    <div class="abstract-text">
+      本研究以京东平台家电品类（电饭煲、吸尘器、扫地机器人）的 <span class="highlight">10,500 条</span>用户评论为研究对象，综合运用<span class="highlight">情感分析</span>（SnowNLP+领域词典）、<span class="highlight">LDA主题模型</span>、<span class="highlight">Word2Vec词向量</span>三种NLP文本测度方法，系统探究了用户评论的情感分布规律、主题结构特征及其对消费决策的影响机制。融合三类NLP特征的综合模型调整R²达 <span class="highlight">0.714</span>，较单一情感分析提升34.2%。
+    </div>
+    <div class="tags">
+      <span class="tag">自然语言处理</span>
+      <span class="tag">情感分析</span>
+      <span class="tag">LDA主题模型</span>
+      <span class="tag">Word2Vec</span>
+      <span class="tag">电商评论</span>
+      <span class="tag">消费决策</span>
+      <span class="tag">家电品类</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📁 论文材料下载</h2>
+    <div class="files-list">
+      <a class="file-item" href="./NLP电商评论情感分析_毕业论文.docx">
+        <span class="icon">📄</span>
+        <div class="info">
+          <div class="name">毕业论文（Word 版）</div>
+          <div class="desc">完整论文文档 · 学术排版 · 约 26,500 字</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="file-item" href="./final_draft.md">
+        <span class="icon">📝</span>
+        <div class="info">
+          <div class="name">论文 Markdown 源码</div>
+          <div class="desc">论文原始 Markdown 格式 · 便于版本管理与协作</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="file-item" href="./formatted-thesis.html">
+        <span class="icon">🌐</span>
+        <div class="info">
+          <div class="name">论文 HTML 预览版</div>
+          <div class="desc">学术排版 HTML · 可直接在浏览器中查看</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔬 研究方法概览</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+      <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+        <div style="font-size: 24px; margin-bottom: 8px;">💬</div>
+        <div style="font-weight: 600; margin-bottom: 4px;">情感分析</div>
+        <div style="font-size: 13px; color: #64748b;">SnowNLP + 家电领域词典增强<br>方面级情感（质量/价格/物流/体验/售后）</div>
+      </div>
+      <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+        <div style="font-size: 24px; margin-bottom: 8px;">🏷️</div>
+        <div style="font-weight: 600; margin-bottom: 4px;">LDA 主题模型</div>
+        <div style="font-size: 13px; color: #64748b;">gensim 实现 · K=5 最优主题数<br>产品质量/功能表现/物流配送/使用体验/性价比</div>
+      </div>
+      <div style="padding: 16px; background: #f8fafc; border-radius: 8px;">
+        <div style="font-size: 24px; margin-bottom: 8px;">📐</div>
+        <div style="font-weight: 600; margin-bottom: 4px;">Word2Vec 词向量</div>
+        <div style="font-size: 13px; color: #64748b;">Skip-gram 架构 · 200 维<br>评论语义一致性 → 销量预测最强因子</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📊 核心发现</h2>
+    <ul style="font-size: 14px; line-height: 2; color: #475569; padding-left: 20px;">
+      <li>家电评论整体呈正向情感倾向（正向占比 <strong>68.3%</strong>），但品类间差异显著</li>
+      <li>LDA 识别出 <strong>五大核心主题</strong>：产品质量、功能表现、物流配送、使用体验、性价比</li>
+      <li>评论<strong>语义一致性</strong>对销量的影响（β=0.527）甚至超过情感得分本身（β=0.327）</li>
+      <li>融合"情感—主题—语义"三维特征的综合模型调整 R²=<strong>0.714</strong></li>
+      <li>售后服务（正向率 55.4%）与使用体验是家电电商的主要短板</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>郭诗彤 · 大连财经学院 管理学院 · 大数据管理与应用专业</p>
+    <p>© 2026 · 毕业论文模拟稿 · 仅供学习参考</p>
+  </div>
+</div>
+</body>
+</html>
